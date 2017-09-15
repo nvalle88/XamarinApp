@@ -1,5 +1,4 @@
 ﻿using AppParqueoAzul.Interfaces;
-using AppParqueoAzul.Models;
 
 using SQLite.Net;
 using SQLiteNetExtensions.Extensions;

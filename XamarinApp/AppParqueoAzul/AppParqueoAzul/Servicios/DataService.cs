@@ -1,6 +1,6 @@
-﻿using AppParqueoAzul.Classes;
-using AppParqueoAzul.Data;
-using AppParqueoAzul.Models;
+﻿using AppParqueoAzul.Data;
+using AppParqueoAzul.Entidades.Negocio;
+using AppParqueoAzul.Entidades.Utils;
 using AppParqueoAzul.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -43,27 +43,6 @@ namespace AppParqueoAzul.Services
 
         }
 
-        public List<CarrosViewModel> listaCarros()
-        {
-            List<CarrosViewModel> lista= new List<CarrosViewModel>();
-            using (var db = new DataAccess())
-            {
-              var ListaCarros= db.GetList<Carro>(false);
-                foreach (var carro in ListaCarros)
-                {
-                    var carroViewModel = new CarrosViewModel();
-                    //{
-                    //    CarroId=carro.CarroId,
-                    //    Placa=carro.Placa,
-                    //    Marca=carro.Marca,
-                    //    Modelo=carro.Modelo,
-                    //    Color=carro.Color,
-                    //};
-                    lista.Add(carroViewModel);
-                }
-                return lista;
-            }
-
-        }
+       
     }
 }

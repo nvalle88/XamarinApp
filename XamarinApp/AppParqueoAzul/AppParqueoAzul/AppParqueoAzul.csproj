@@ -39,15 +39,10 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Behaviors\PlacaValidationBehavior.cs" />
-    <Compile Include="Entidades\ModeloTranferencia\BuscarTarjetaPrepago.cs" />
-    <Compile Include="Entidades\ModeloTranferencia\ConsultarSaldo.cs" />
-    <Compile Include="Entidades\ModeloTranferencia\LoginRequest.cs" />
-    <Compile Include="Entidades\ModeloTranferencia\MarcaRequest.cs" />
-    <Compile Include="Entidades\ModeloTranferencia\ModeloRequest.cs" />
+    <Compile Include="Entidades\ModeloTransferencia\LoginRequest.cs" />
     <Compile Include="Entidades\Utils\Response.cs" />
-    <Compile Include="Entidades\ModeloTranferencia\ResponseLogin.cs" />
-    <Compile Include="Entidades\ModeloTranferencia\TiempoRequest.cs" />
-    <Compile Include="Entidades\ModeloTranferencia\UsuarioRequest.cs" />
+    <Compile Include="Entidades\ModeloTransferencia\ResponseLogin.cs" />
+    <Compile Include="Entidades\ModeloTransferencia\UsuarioRequest.cs" />
     <Compile Include="Controls\BindablePicker.cs" />
     <Compile Include="Controls\CircularProgress.cs" />
     <Compile Include="Controls\CircularProgressControl.cs" />
@@ -55,30 +50,7 @@
     <Compile Include="Infrastructure\InstanceLocator.cs" />
     <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="Interfaces\INetworkConnection.cs" />
-    <Compile Include="Entidades\Negocio\Agente.cs" />
-    <Compile Include="Entidades\Negocio\Barrios.cs" />
-    <Compile Include="Entidades\Negocio\Carro.cs" />
-    <Compile Include="Entidades\Negocio\Class1.cs" />
-    <Compile Include="Entidades\Negocio\Marca.cs" />
-    <Compile Include="Entidades\Negocio\Modelo.cs" />
-    <Compile Include="Entidades\Negocio\Multa.cs" />
-    <Compile Include="Entidades\Negocio\Parqueo.cs" />
-    <Compile Include="Entidades\Negocio\Plaza.cs" />
-    <Compile Include="Entidades\Negocio\PlazaView.cs" />
-    <Compile Include="Entidades\Negocio\Saldo.cs" />
-    <Compile Include="Entidades\Negocio\TarjetaCredito.cs" />
-    <Compile Include="Entidades\Negocio\TarjetaPrepago.cs" />
     <Compile Include="Entidades\Negocio\Usuario.cs" />
-    <Compile Include="Entidades\Negocio\UsuarioTarjetaPrepago.cs" />
-    <Compile Include="Pages\AdquirirPrepagoPage.xaml.cs">
-      <DependentUpon>AdquirirPrepagoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\CarrosPage.xaml.cs">
-      <DependentUpon>CarrosPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\ComprarSaldoPage.xaml.cs">
-      <DependentUpon>ComprarSaldoPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -91,49 +63,15 @@
     <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\NuevaTarjetaCreditoPage.xaml.cs">
-      <DependentUpon>NuevaTarjetaCreditoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\NuevoCarroPage.xaml.cs">
-      <DependentUpon>NuevoCarroPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\NuevoParqueoPage.xaml.cs">
-      <DependentUpon>NuevoParqueoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\ParquearPage.xaml.cs">
-      <DependentUpon>ParquearPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PlazaPage.xaml.cs">
-      <DependentUpon>PlazaPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PromocionesPage.xaml.cs">
-      <DependentUpon>PromocionesPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\MetodoPago.xaml.cs">
-      <DependentUpon>MetodoPago.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\TarjetasCreditosPage.xaml.cs">
-      <DependentUpon>TarjetasCreditosPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicios\ApiService.cs" />
     <Compile Include="Servicios\DataService.cs" />
     <Compile Include="Servicios\DialogService.cs" />
     <Compile Include="Servicios\NavigationService.cs" />
     <Compile Include="Servicios\NetworkService.cs" />
-    <Compile Include="ViewModels\BuscarTarjetaPrepagoViewModel.cs" />
-    <Compile Include="ViewModels\CarrosViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="ViewModels\MarcaViewModel.cs" />
-    <Compile Include="ViewModels\ModeloViewModel.cs" />
     <Compile Include="ViewModels\MenuItemViewModel.cs" />
-    <Compile Include="ViewModels\NuevaTarjetaCreditoViewModel.cs" />
-    <Compile Include="ViewModels\NuevoCarroViewModel.cs" />
-    <Compile Include="ViewModels\NuevoParqueoViewModel.cs" />
-    <Compile Include="ViewModels\PlazaViewModel.cs" />
-    <Compile Include="ViewModels\PrepagoViewModel.cs" />
-    <Compile Include="ViewModels\TarjetaCreditoViewModel.cs" />
     <Compile Include="ViewModels\UsuarioViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -246,73 +184,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\CarrosPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\ParquearPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\MetodoPago.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\NuevoParqueoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\NuevoCarroPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\PromocionesPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Pages\LoginPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\NuevaTarjetaCreditoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\TarjetasCreditosPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\AdquirirPrepagoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\ComprarSaldoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\PlazaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

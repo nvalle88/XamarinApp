@@ -1,5 +1,4 @@
 ﻿using GalaSoft.MvvmLight.Command;
-using AppParqueoAzul.Models;
 using AppParqueoAzul.Pages;
 using AppParqueoAzul.Services;
 using System;
@@ -9,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.ComponentModel;
+using AppParqueoAzul.Servicios;
 
 namespace AppParqueoAzul.ViewModels
 {
@@ -76,52 +76,38 @@ namespace AppParqueoAzul.ViewModels
 
         private async void Login()
         {
-            IsRunning = true;
-            if (string.IsNullOrEmpty(Usuario))
-            {
-                IsRunning = false;
-                await dialogService.ShowMessage("Error", "Debe ingresar el nombre de Usuario");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(Contrasena))
-            {
-                IsRunning = false;
-                await dialogService.ShowMessage("Error", "Debe ingresar la Contraseña");
-                return;
-            }
-
-           var response= await apiService.Login(Usuario, Contrasena);
-            if (response.IsSuccess)
-            {
-                var usuario =(Usuario)response.Result;
-
-                UsuarioViewModel usuarioView = new UsuarioViewModel
-                {
-                    Carro = usuario.Carro,
-                    Contrasena = usuario.Contrasena,
-                    Nombre = usuario.Contrasena,
-                    Parqueo = usuario.Parqueo,
-                    Saldo = usuario.Saldo,
-                    TarjetaCredito = usuario.TarjetaCredito,
-                    UsuarioId = usuario.UsuarioId,
-                    UsuarioTarjetaPrepago = usuario.UsuarioTarjetaPrepago,
-
-                };
-
-                var main = MainViewModel.GetInstance();
-                main.LoadMenu();
-                
-
-                navigationService.SetMainPage(usuarioView);
-              //  main.LoadTiempo();
-
-                IsRunning = false;
-                return;
-            }
-            IsRunning = false;
-            await dialogService.ShowMessage("Error", "Usuario o contraseña incorrectos");
            
+
+            await navigationService.Navigate();
+
+
+           
+
+           
+
+
+            //  main.LoadTiempo();
+
+            IsRunning = false;
+            return;
+
+            //IsRunning = true;
+            //if (string.IsNullOrEmpty(Usuario))
+            //{
+            //    IsRunning = false;
+            //    await dialogService.ShowMessage("Error", "Debe ingresar el nombre de Usuario");
+            //    return;
+            //}
+
+            //if (string.IsNullOrEmpty(Contrasena))
+            //{
+            //    IsRunning = false;
+            //    await dialogService.ShowMessage("Error", "Debe ingresar la Contraseña");
+            //    return;
+            //}
+
+
+
         }
 
         #endregion

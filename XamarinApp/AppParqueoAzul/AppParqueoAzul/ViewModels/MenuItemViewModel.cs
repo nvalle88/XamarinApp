@@ -42,7 +42,6 @@ namespace AppParqueoAzul.ViewModels
 
         private async void Navigate()
         {
-            await navigationService.Navigate(PageName);
         }
 
         #endregion

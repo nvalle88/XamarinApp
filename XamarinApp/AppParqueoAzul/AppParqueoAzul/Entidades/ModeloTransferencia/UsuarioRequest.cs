@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppParqueoAzul.Classes
+namespace AppParqueoAzul.Entidades.ModeloTransferencia
 {
-  public  class UsuarioRequest
+    public  class UsuarioRequest
     {
         public string UsuarioId { get; set; }
     }

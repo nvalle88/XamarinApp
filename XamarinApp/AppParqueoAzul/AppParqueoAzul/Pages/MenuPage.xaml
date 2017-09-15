@@ -12,7 +12,7 @@
     <StackLayout  Padding="10" Spacing="20" >
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
             <Image
-               Source="ic_City_Park.png"
+               Source="ds.png"
                 WidthRequest="80"
                 HeightRequest="80"
                 HorizontalOptions="CenterAndExpand"
@@ -30,9 +30,6 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding NavigateCommand}"></TapGestureRecognizer>
-                            </Grid.GestureRecognizers>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
